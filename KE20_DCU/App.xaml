@@ -2,6 +2,7 @@
     x:Class="KE20_DCU.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:KE20_DCU">
+    xmlns:local="using:KE20_DCU"
+    RequestedTheme="Dark">
 
 </Application>
