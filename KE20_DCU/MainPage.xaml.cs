@@ -4,6 +4,8 @@ using KE20_DCU.UI;
 using System;
 using System.Threading;
 using Windows.ApplicationModel.Core;
+using Windows.Foundation;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml.Controls;
 
 namespace KE20_DCU
@@ -19,6 +21,9 @@ namespace KE20_DCU
         public MainPage()
         {
             this.InitializeComponent();
+
+            ApplicationView.PreferredLaunchViewSize = new Size(1024, 600);
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
 
             uiSpeedoTacho.SpeedRevs = mSpeedRevs;
 

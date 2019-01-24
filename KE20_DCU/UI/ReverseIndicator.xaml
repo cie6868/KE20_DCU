@@ -8,7 +8,7 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <Grid Background="DarkOrange" Visibility="{x:Bind BoolToVisibility(Output.ReversePressed), Mode=OneWay}">
+    <Grid Background="DarkOrange" Visibility="{x:Bind BoolToVisibility(Output.ReversePressed), Mode=OneWay}" Padding="16">
         <Viewbox>
             <TextBlock Text="REVERSE" Foreground="White"/>
         </Viewbox>

@@ -8,7 +8,7 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <Grid Background="DarkRed" Visibility="{x:Bind BoolToVisibility(Output.BrakePressed), Mode=OneWay}">
+    <Grid Background="DarkRed" Visibility="{x:Bind BoolToVisibility(Output.BrakePressed), Mode=OneWay}" Padding="16">
         <Viewbox>
             <TextBlock Text="BRAKE" Foreground="White"/>
         </Viewbox>
