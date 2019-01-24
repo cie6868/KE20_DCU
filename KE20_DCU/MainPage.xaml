@@ -2,15 +2,80 @@
     x:Class="KE20_DCU.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:KE20_DCU"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="using:KE20_DCU.UI"
+    xmlns:functions="using:KE20_DCU.UI.Functions"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Viewbox>
-            <Button>Meh.</Button>
-        </Viewbox>
+    <Grid Padding="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <ui:LeftTurnSignal x:Name="uiLeftTurnSignal"/>
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="1">
+            <ui:Clock x:Name="uiClock"/>
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="2">
+            <ui:RightTurnSignal x:Name="uiRightTurnSignal"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <ui:SpeedoTacho x:Name="uiSpeedoTacho"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="1" Grid.Column="1">
+                <ui:BrakeIndicator x:Name="uiBrakeIndicator"/>
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="1">
+                <ui:ReverseIndicator x:Name="uiReverseIndicator"/>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" ColumnSpacing="16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <functions:IgnitionFunction Grid.Column="0" x:Name="funIgnition"/>
+
+            <functions:LowbeamFunction Grid.Column="1" x:Name="funLowbeam"/>
+
+            <functions:HighbeamFunction Grid.Column="2" x:Name="funHighbeam"/>
+
+            <functions:RestartFunction Grid.Column="3" x:Name="funRestart"/>
+        </Grid>
     </Grid>
 </Page>
