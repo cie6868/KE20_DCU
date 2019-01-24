@@ -172,6 +172,7 @@
     </AppxManifest>
     <Content Include="Assets\Fonts\Elektra.ttf" />
     <Content Include="Assets\Fonts\Digital7.ttf" />
+    <Content Include="Screenshots\DCU_Screenshot_20190124.png" />
     <None Include="KE20_DCU_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
